@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PayPal JS SDK Standard Integration</title>
-  </head>
-  <body>
-    <div id="paypal-button-container"></div>
-    <p id="result-message"></p>
-    <!-- Replace the "test" client-id value with your client-id -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AcEFz_TWrlVkkJC1jFKaYhgUqF1clYquPkba8SR_eQw8bh2FQ7fwvdL2-igeq5g5FQjorpZZvCrbr2t0&components=buttons&vault=true&intent=subscription&enable-funding=card&disable-funding=paylater" data-sdk-integration-source="integrationbuilder_sc"></script>
-    <script src="app.js"></script>
-  </body>
-</html>
+<div id="paypal-button-container-P-7HW27457CL671253YMWURWMY"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AajJhOVL9W3xQO_57mDtM-8CWmnt5eBmR4guCdx7R6lb4PRJt17gBZdcgorz7MjAtRtk9MSUyTAk7rUI&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-7HW27457CL671253YMWURWMY'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-7HW27457CL671253YMWURWMY'); // Renders the PayPal button
+</script>
