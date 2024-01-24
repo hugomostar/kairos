@@ -1,21 +1,275 @@
-<div id="paypal-button-container-P-7HW27457CL671253YMWURWMY"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AajJhOVL9W3xQO_57mDtM-8CWmnt5eBmR4guCdx7R6lb4PRJt17gBZdcgorz7MjAtRtk9MSUyTAk7rUI&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+   <head>
+      <meta charset='utf-8'>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <title>Podrška Udruzi Kairos</title>
+      <link href='#' rel='stylesheet'>
+      <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+      <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+      <style>::-webkit-scrollbar {
+         width: 8px;
+         }
+         /* Track */
+         ::-webkit-scrollbar-track {
+         background: #f1f1f1; 
+         }
+         /* Handle */
+         ::-webkit-scrollbar-thumb {
+         background: #888; 
+         }
+         /* Handle on hover */
+         ::-webkit-scrollbar-thumb:hover {
+         background: #555; 
+         } .green{
+         background-color:blue !important;
+         }
+         input[type="radio"]:checked+label .click_option{
+         border:2px solid #888888;
+         } 
+         input[type="radio"]:checked+label .selecting{
+         border:2px solid blue;
+         transform:scale(1.02);
+         color:blue;
+         } 
+		 input[type="radio"]:not(.do-not):checked + label {
+		 border:2px solid blue;
+         transform:scale(1.02);
+         color:blue;
+         }
+      </style>
+   </head>
+   <body class="h-full">
+      <div class="flex justify-center items-center bg-indigo-300 h-full">
+         <div class="my-10 w-96 md:w-4/5 bg-white rounded-lg md:rounded-lg" style="max-width: 1000px;">
+            <div class="flex h-full w-full">
+               <div class="h-full p-3 rounded-lg w-full bg-white">
+                  <p class="font-semibold text-xl mt-2 text-purple-800 text-center">Udruga Kairos Mostar <br/> Podržite naš rad!</p>
+                  <p class="text-gray-500 text-sm mt-5">Vaša podrška nam je jako važna kako bi mogli pružati podršku našim obiteljima!</p>
+				    <img class="w-full object-cover md:hidden lg:hidden mt-2" src="https://scontent.fsjj1-1.fna.fbcdn.net/v/t31.18172-8/11402380_945429205478805_8411905252048188800_o.jpg?_nc_cat=111&ccb=1-7&_nc_sid=4dc865&_nc_eui2=AeFpTRiIq6xzXFT8BZCQrdtWG7RmrobXN_wbtGauhtc3_Lk9xAjEfWHVngzv_-eWbN3dld28pgWMaeIdopeo2nnt&_nc_ohc=pWw22XG36K8AX89GVaa&_nc_ht=scontent.fsjj1-1.fna&oh=00_AfAhRoHB81_HRkhbEaGtAxQHiYVfJM4B-UgL7jprROlQfA&oe=65D870D7">
+                  <p class="mt-3 font-semibold text-purple-900">Opcija:</p>
+                  <div class="flex gap-2 -mt-5">
+                     <div class="w-full ">
+                        <input class="appearance-none do-not" type="radio" name="giving" id="giving1">
+                        <label for="giving1">
+                           <div class="selecting h-10 text-gray-700 font-semibold text-sm cursor-pointer transition-all justify-center items-center w-full border-2 flex ">
+                              <p>Jednokratna donacija</p>
+                           </div>
+                        </label>
+                     </div>
+                     <div class="w-full">
+                        <input class="appearance-none do-not" type="radio" name="giving" id="giving2">
+                        <label for="giving2">
+                           <div class="selecting h-10 text-gray-700 font-semibold text-sm cursor-pointer transition-all justify-center items-center w-full border-2 flex ">
+                              <p>Mjesečna pretplata</p>
+                           </div>
+                        </label>
+                     </div>
+                  </div>
+                  <p class="mt-3 font-semibold text-purple-900">Želim donirati:</p>
+                  <div class="flex -mt-5 gap-2">
+                     <div class="w-full selecting">
+                        <input class="appearance-none " type="radio" name="money" id="money1">
+                        <label for="money1" class="h-10 text-gray-700 font-semibold text-sm cursor-pointer transition-all justify-center items-center w-full border-2 flex ">€100</label>
+                     </div>
+                     <div class="w-full ">
+                        <input class="appearance-none " type="radio" name="money" id="money2">
+                        <label for="money2" class="h-10 text-gray-700 font-semibold cursor-pointer transition-all text-sm justify-center items-center w-full border-2 flex ">€50</label>
+                     </div>
+                     <div class="w-full ">
+                        <input class="appearance-none " type="radio" name="money" id="money3">
+                        <label for="money3" class="h-10 text-gray-700 font-semibold text-sm cursor-pointer transition-all justify-center items-center w-full border-2 flex ">€25</label>
+                     </div>
+                     <div class="w-full ">
+                        <input class="appearance-none " type="radio" name="money" id="money4">
+                        <label for="money4" class="h-10 text-gray-700 font-semibold cursor-pointer transition-all text-sm justify-center items-center w-full border-2 flex ">€10</label>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-xl font-semibold text-purple-900" id="total"></p>
+                  <hr class="my-4">
+                  <div class="my-4 flex justify-between"> 
+                     <button id="paymentBtn" class="hidden h-10 w-32 bg-blue-600 text-sm text-white rounded-lg cursor-pointer transition-all hover:bg-blue-800" onclick="paypalPayment()">Idi na uplatu</button> 
+                  </div>
+				   <div>
+                  <div id="paypal-button-container"></div>
+               </div>
+               </div>
+              
+               <div class="h-full hidden md:block relative md:rounded-lg  overflow-hidden bg-[url('https://imgur.com/2hR32WP.jpg')] w-full">
+                  <img class="h-full object-cover" src="https://scontent.fsjj1-1.fna.fbcdn.net/v/t31.18172-8/11402380_945429205478805_8411905252048188800_o.jpg?_nc_cat=111&ccb=1-7&_nc_sid=4dc865&_nc_eui2=AeFpTRiIq6xzXFT8BZCQrdtWG7RmrobXN_wbtGauhtc3_Lk9xAjEfWHVngzv_-eWbN3dld28pgWMaeIdopeo2nnt&_nc_ohc=pWw22XG36K8AX89GVaa&_nc_ht=scontent.fsjj1-1.fna&oh=00_AfAhRoHB81_HRkhbEaGtAxQHiYVfJM4B-UgL7jprROlQfA&oe=65D870D7">
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type='text/javascript' src='https://cdn.tailwindcss.com/3.0.12'></script>
+      <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script>
+    
+     
+<script src="https://www.paypal.com/sdk/js?client-id=AajJhOVL9W3xQO_57mDtM-8CWmnt5eBmR4guCdx7R6lb4PRJt17gBZdcgorz7MjAtRtk9MSUyTAk7rUI&vault=true" data-sdk-integration-source="button-factory"></script>
 <script>
-  paypal.Buttons({
-      style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-7HW27457CL671253YMWURWMY'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-7HW27457CL671253YMWURWMY'); // Renders the PayPal button
-</script>
+		var planId = '';	 
+		var selectedType = 0;
+		var totalToPay = 0;
+
+	  document.addEventListener('DOMContentLoaded', function () {
+	    var paypalContainer = document.getElementById('paypal-button-container');
+       	var total = document.getElementById("total");
+       	var paymentBtn = document.getElementById("paymentBtn");
+       	var amountChosen = false;
+       	var typeChosen = false;
+		// Selecting the radio buttons
+        var oneTimeDonationRadio = document.getElementById('giving1');
+        var monthlySubscriptionRadio = document.getElementById('giving2');
+
+        // Function to be executed when radio state changes
+        function onRadioChange(event) {		   
+			typeChosen = true;
+			paypalContainer.innerHTML = '';
+			
+            if (oneTimeDonationRadio.checked) {
+                selectedType = 1;
+            } else if (monthlySubscriptionRadio.checked) {
+                selectedType = 2;
+            }
+			if (amountChosen) {
+				paymentBtn.style.display = "block";
+			}
+        }
+
+        oneTimeDonationRadio.addEventListener('change', onRadioChange);
+        monthlySubscriptionRadio.addEventListener('change', onRadioChange);
+		
+		
+        var amount100 = document.getElementById('money1');
+        var amount50 = document.getElementById('money2');
+        var amount25 = document.getElementById('money3');
+        var amount10 = document.getElementById('money4');
+
+        function onAmountChange(event) {
+			if (typeChosen) {
+				paymentBtn.style.display = "block";
+			}
+		    amountChosen = true;
+			paypalContainer.innerHTML = '';
+
+            if (amount100.checked) {
+				total.innerHTML = "€100";
+				totalToPay = 100;
+				planId = 'P-3DP8083419615321MMWYPCKA';
+            } else if (amount50.checked) {
+				total.innerHTML = "€50";
+				totalToPay = 50;
+				planId = 'P-42324353E12456116MWYPCEY';
+            } else if (amount25.checked) {
+				total.innerHTML = "€25";
+				totalToPay = 25;
+				planId = 'P-47T41099WY931614LMWYPB4I';
+            } else if (amount10.checked) {
+				total.innerHTML = "€10";
+				totalToPay = 10;
+				planId = 'P-7HW27457CL671253YMWURWMY';
+            }
+        }
+
+        amount100.addEventListener('change', onAmountChange);
+        amount50.addEventListener('change', onAmountChange);
+        amount25.addEventListener('change', onAmountChange);
+        amount10.addEventListener('change', onAmountChange);
+    });
+	
+	function paypalPayment() {
+		if (selectedType == 1) { 
+			loadPaypalBtn()
+		}
+		if (selectedType == 2) {
+			loadPaypalSubscriptionBtn()
+		}
+	}
+	
+	
+	function loadPaypalBtn() {
+	paypal.Buttons({
+        createOrder: function (data, actions) {
+            return actions.order.create({
+                
+                purchase_units: [{
+                    amount: {
+                        value: totalToPay
+                    }
+                }], application_context: {
+                    shipping_preference: 'NO_SHIPPING'
+                }
+            })
+        },
+
+        // Call your server to finalize the transaction
+        onApprove: function (data, actions) {
+            // Capture the transaction when the customer approves the payment
+            return actions.order.capture().then(function (details) {
+                // Three cases to handle:
+                //   (1) Recoverable INSTRUMENT_DECLINED -> call actions.restart()
+                //   (2) Other non-recoverable errors -> Show a failure message
+                //   (3) Successful transaction -> Show confirmation or thank you
+
+                // This example reads a v2/checkout/orders capture response, propagated from the server
+                // You could use a different API or structure for your 'orderData'
+                var errorDetail = Array.isArray(details) && details[0];
+
+                if (errorDetail && errorDetail.issue === 'INSTRUMENT_DECLINED') {
+                    return actions.restart(); // Recoverable state, per:
+                    // https://developer.paypal.com/docs/checkout/integration-features/funding-failure/
+                }
+
+                if (errorDetail) {
+                    var msg = 'Sorry, your transaction could not be processed.';
+                    if (errorDetail.description) msg += '\n\n' + errorDetail.description;
+                    if (debug_id) msg += ' (' + debug_id + ')';
+                    console.log(msg);
+                    return
+                }
+
+                // Successful capture! For demo purposes:
+                //console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                console.log(details);
+				alert('Uspješno!'); // You can add optional success message for the subscriber here
+
+                // Replace the above to show a success message within this page, e.g.
+                // const element = document.getElementById('paypal-button-container');
+                // element.innerHTML = '';
+                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                // Or go to another URL:  actions.redirect('thank_you.html');
+
+            }).catch(function (err) {
+                console.log(err)
+            })
+        },
+        onError: function (error) {
+            // Handle any errors that occurred during the button rendering or other setup
+            console.log('Render or setup error:', error);
+        }
+
+    }).render('#paypal-button-container');
+   }
+   function loadPaypalSubscriptionBtn() {
+     paypal.Buttons({
+         style: {
+             shape: 'rect',
+             color: 'gold',
+             layout: 'vertical',
+             label: 'subscribe'
+         },
+         createSubscription: function(data, actions) {
+           return actions.subscription.create({
+             /* Creates the subscription */
+             plan_id: planId
+           });
+         },
+         onApprove: function(data, actions) {
+           alert('Uspješno!'); // You can add optional success message for the subscriber here
+		   console.log(data)
+         }
+     }).render('#paypal-button-container'); // Renders the PayPal button
+     }
+	</script>
+   </body>
+</html>
