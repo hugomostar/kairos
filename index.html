@@ -122,7 +122,9 @@
         var monthlySubscriptionRadio = document.getElementById('giving2');
 
         // Function to be executed when radio state changes
-        function onRadioChange(event) {		   
+        function onRadioChange(event) {		
+		    setTimeout(() => window.scroll({top: 1000, behavior: 'smooth'}), 200)
+			
 			typeChosen = true;
 			paypalContainer.innerHTML = '';
 			
@@ -146,6 +148,8 @@
         var amount10 = document.getElementById('money4');
 
         function onAmountChange(event) {
+		    setTimeout(() => window.scroll({top: 1000, behavior: 'smooth'}), 200)
+			
 			if (typeChosen) {
 				paymentBtn.style.display = "block";
 			}
@@ -184,6 +188,8 @@
 		if (selectedType == 2) {
 			loadPaypalSubscriptionBtn()
 		}
+		
+		setTimeout(() => window.scroll({top: 1000, behavior: 'smooth'}), 1000)
 	}
 	
 	
